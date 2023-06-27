@@ -40,15 +40,24 @@
 
 #  ---------- third solution ----------
 
+#tasks_cycles = [int(x) for x in input().split(', ')]
+#wanted_task_index = int(input())
+#
+#wanted_task_cycles = [x for i, x in enumerate(tasks_cycles) if
+#                      (x == tasks_cycles[wanted_task_index] and i <= wanted_task_index) or
+#                      x < tasks_cycles[wanted_task_index]]
+#result = sum(wanted_task_cycles)
+#
+#print(result)
+
+#  ---------- fourth solution ----------
+
 tasks_cycles = [int(x) for x in input().split(', ')]
 wanted_task_index = int(input())
 
-wanted_task_cycles = [x for i, x in enumerate(tasks_cycles) if
+print(sum([x for i, x in enumerate(tasks_cycles) if
                       (x == tasks_cycles[wanted_task_index] and i <= wanted_task_index) or
-                      x < tasks_cycles[wanted_task_index]]
-result = sum(wanted_task_cycles)
-
-print(result)
+                      x < tasks_cycles[wanted_task_index]]))
 
 #    Input                    Output
 # 3, 1, 10, 1, 2                7
